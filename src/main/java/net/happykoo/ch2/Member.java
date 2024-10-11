@@ -1,4 +1,4 @@
-package net.happykoo.jpa.entity;
+package net.happykoo.ch2;
 
 import lombok.*;
 
