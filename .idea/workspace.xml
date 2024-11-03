@@ -62,7 +62,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="JUnit.JpaTestCh3.test3">
+  <component name="RunManager" selected="JUnit.JpaTestCh3.test1">
     <configuration name="JpaTestCh2.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jpa" />
       <extension name="coverage">
@@ -144,9 +144,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JpaTestCh3.test1" />
         <item itemvalue="JUnit.JpaTestCh3.test3" />
         <item itemvalue="JUnit.JpaTestCh3.test2" />
-        <item itemvalue="JUnit.JpaTestCh3.test1" />
         <item itemvalue="JUnit.JpaTestCh3" />
         <item itemvalue="JUnit.JpaTestCh2.test1" />
       </list>
@@ -161,7 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728675841163</updated>
       <workItem from="1728675842646" duration="15874000" />
-      <workItem from="1730628272615" duration="6773000" />
+      <workItem from="1730628272615" duration="6991000" />
     </task>
     <servers />
   </component>

@@ -31,13 +31,21 @@ public class JpaTestCh3 {
 
             //managed
             em.persist(member);
+            em.flush();
+
+            assertEquals(true, em.contains(member));
 
             //detached
             em.detach(member);
 
+            assertEquals(false, em.contains(member));
+
             //remove(detached 된 상태에서는 merge 해줘야함)
             em.remove(em.merge(member));
 //            em.remove(member);
+
+            //remove 되면, persistence context 에서 제거됨
+            assertEquals(false, em.contains(member));
 
             tx.commit();
         } catch (Exception e) {
