@@ -9,6 +9,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import java.util.Objects;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class JpaTestCh3 {
@@ -33,7 +35,7 @@ public class JpaTestCh3 {
             //detached
             em.detach(member);
 
-            //remove(detached 된 상태에서는 merge 해줘야함
+            //remove(detached 된 상태에서는 merge 해줘야함)
             em.remove(em.merge(member));
 //            em.remove(member);
 
@@ -76,11 +78,24 @@ public class JpaTestCh3 {
 
         transaction.begin();
 
-        Member member = em.find(Member.class, "happykoo");
+        //new
+        Member member = em.find(Member.class, "Happykoo2");
+
+        if (Objects.isNull(member)) {
+            member = Member.builder()
+                    .id("Happykoo2")
+                    .userName("해피쿠")
+                    .age(32)
+                    .build();
+
+            em.persist(member);
+        }
 
         member.setAge(50);
         member.setUserName("TTT");
 
         transaction.commit();
+
+        assertEquals("TTT", em.find(Member.class, "Happykoo2").getUserName());
     }
 }
