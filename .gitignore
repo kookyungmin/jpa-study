@@ -13,3 +13,5 @@
 # Maven
 log/
 target/
+
+src/main/resources/META-INF/persistence.xml
