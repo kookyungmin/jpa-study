@@ -1,4 +1,4 @@
-package net.happykoo.jpa.jpastudy;
+package net.happykoo.jpa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

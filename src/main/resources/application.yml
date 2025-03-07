@@ -1,0 +1,18 @@
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+    property:
+      prefix: ENC(
+      suffix: )
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/happyjpa
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ENC(Cu4BQM9b2mzbx65guB7C/n1HcNHQuVJcechtD0T2tjk=)
+    password: ENC(jXAp0z60iYVluFgN1h/yRZxMSvQlGb9mfbaPXdDAlZ4=)
+    hikari:
+      maximum-pool-size: 5
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
