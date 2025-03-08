@@ -65,7 +65,7 @@ class UserRepositoryTest {
 
         //example matcher
         ExampleMatcher exampleMatcher = ExampleMatcher.matching()
-                .withIgnoreCase("name")
+                .withIgnorePaths("name")
                 .withMatcher("email", endsWith());
         Example<User> example = Example.of(User.builder()
                 .name("tt")
